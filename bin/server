@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# `bin/server` is the entrypoint for the release.
+# It starts the Phoenix server with the correct environment variables.
+
+set -e
+
+# Set the environment
+export MIX_ENV=prod
+export PHX_SERVER=true
+
+# Start the server
+exec "$(dirname "$0")/photo_scavenger" start

@@ -1,41 +1,60 @@
-# The directory Mix will write compiled artifacts to.
-/_build/
-
-# If you run "mix test --cover", coverage assets end up here.
-/cover/
-
-# The directory Mix downloads your dependencies sources to.
-/deps/
-
-# Where 3rd-party dependencies like ExDoc output generated docs.
-/doc/
-
-# Ignore .fetch files in case you like to edit your project deps locally.
-/.fetch
-
-# If the VM crashes, it generates a dump, let's ignore it too.
-erl_crash.dump
-
-# Also ignore archive artifacts (built via "mix archive.build").
-*.ez
-
-# Temporary files, for example, from tests.
-/tmp/
-
-# Ignore package tarball (built via "mix hex.build").
-photo_scavenger-*.tar
-
-# Ignore assets that are produced by build tools.
-/priv/static/assets/
-
-# Ignore digested assets cache.
-/priv/static/cache_manifest.json
-
-# In case you use Node.js/npm, you want to ignore these.
+# The directory containing the compiled files
+_build/
+deps/
+.elixir_ls/
+.credo/
+cover/
+doc/
+node_modules/
 npm-debug.log
-/assets/node_modules/
+yarn-error.log
 
-# Database files
+# The directory containing the compiled assets
+priv/static/assets/
+
+# The directory containing the database
 *.db
-*.db-*
+*.db-shm
+*.db-wal
 
+# The directory containing the logs
+logs/
+
+# The directory containing the temporary files
+tmp/
+
+# The directory containing the test files
+test/
+
+# The directory containing the documentation
+docs/
+
+# The directory containing the configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# The directory containing the git files
+.git/
+.gitignore
+
+# The directory containing the editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# The directory containing the OS files
+.DS_Store
+Thumbs.db
+
+# The directory containing the fly files
+fly.toml
+Dockerfile
+.dockerignore
+
+# The directory containing the uploaded files
+priv/static/uploads/
