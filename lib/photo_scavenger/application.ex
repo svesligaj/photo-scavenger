@@ -12,7 +12,6 @@ defmodule PhotoScavenger.Application do
       PhotoScavenger.Repo,
       {Ecto.Migrator,
        repos: Application.fetch_env!(:photo_scavenger, :ecto_repos), skip: skip_migrations?()},
-      {DNSCluster, query: Application.get_env(:photo_scavenger, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhotoScavenger.PubSub},
       # Start a worker by calling: PhotoScavenger.Worker.start_link(arg)
       # {PhotoScavenger.Worker, arg},
@@ -35,7 +34,6 @@ defmodule PhotoScavenger.Application do
   end
 
   defp skip_migrations?() do
-    # By default, sqlite migrations are run when using a release
     System.get_env("RELEASE_NAME") == nil
   end
 end

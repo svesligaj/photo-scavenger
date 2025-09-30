@@ -2,7 +2,11 @@ import Config
 
 # Configure your database
 config :photo_scavenger, PhotoScavenger.Repo,
-  database: Path.expand("../photo_scavenger_dev.db", __DIR__),
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  database: "photo_scavenger_dev",
+  port: 5432,
   pool_size: 5,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true
